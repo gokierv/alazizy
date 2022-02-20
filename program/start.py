@@ -91,7 +91,7 @@ async def start_(client: Client, message: Message):
 
 
 @Client.on_message(
-    command(["المعلومات", f"alive@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+    command(["السورس", f"alive@{BOT_USERNAME}"]) & filters.group & ~filters.edited
 )
 async def alive(client: Client, message: Message):
     current_time = datetime.utcnow()
@@ -101,15 +101,15 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("𝐅𝐫𝐎𝐦 𝑽𝑬𝑵𝑶𝑴", url=f"https://t.me/V_O_O"),
+                InlineKeyboardButton("مطور السورس", url=f"https://t.me/V_O_O"),
                 InlineKeyboardButton(
-                    "𝐬𝐨𝐮𝐫𝐜𝐞 𝑽𝑬𝑵𝑶𝑴", url=f"https://t.me/S_Q_I"
+                    "قناة السورس", url=f"https://t.me/S_Q_I"
                 ),
             ]
         ]
     )
 
-    alive = f"**مرحبآ  {message.from_user.mention()}, انا {BOT_NAME}**\n\n✨ البوت يعمل بشكل طبيعي\n🍀 انا : [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ اصدار Bot : `v{__version__}`\n🍀 اصدار Pyrogram : `{pyrover}`\n✨ اصدار Python: `{__python_version__}`\n🍀 اصدار PyTgCalls : `{pytover.__version__}`\n✨ وقت التشغيل: `{uptime}`\n\n**شكرًا لإضافتي هنا ، لتشغيل الفيديو والموسيقى على دردشة الفيديو الخاصة بمجموعتك ** ❤"
+    alive = f"**مرحبآ  {message.from_user.mention()}, انا {BOT_NAME}**\n\n✨ البوت يعمل بشكل طبيعي\n🍀 انا : [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n✨ اصدار Bot : `v{__version__}`\n🍀 اصدار Pyrogram : `{pyrover}`\n✨ اصدار Python: `{__python_version__}`\n🍀 اصدار PyTgCalls : `{pytover.__version__}`\n✨ وقت التشغيل: `{uptime}`\n\n** اهلا بك في سورس فينوم شكرا لاضافتني** ❤"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
